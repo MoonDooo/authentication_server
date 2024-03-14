@@ -1,4 +1,4 @@
-# Editing Spring Security를 이용한 OAuth2 인증 및 JWT 발급
+# Spring Security를 이용한 OAuth2 인증 및 JWT 발급
 
 Spring security을 활용하여 [travel plan](https://github.com/IF-TG/spring/wiki) 프로젝트에 필요한 사용자 로그인 및 인증을 구현한 프로젝트입니다. 사용자의 회원 가입 및 로그인은 OAUTH2를 이용합니다. OAUTH2는 흔히 볼 수 있는 소셜 로그인으로서 사용자에게 편리하게 가입할 수 있도록 지원했습니다. 이 프로젝트는 현재 naver를 이용한 로그인을 지원하고 있습니다. 사용자는 OAUTH2을 통해 회원 가입 후 JWT를 발급 받으며 해당 JWT를 관리하기 위한 블랙 리스트, 갱신 등을 구현했습니다. 
 
