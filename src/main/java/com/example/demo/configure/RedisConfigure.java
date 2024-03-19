@@ -28,12 +28,17 @@ public class RedisConfigure {
         template.setKeySerializer(new StringRedisSerializer());
         template.setHashKeySerializer(new StringRedisSerializer());
 
+        /**
+         * 커스텀 역직렬화
+         */
         ObjectMapper objectMapper = new ObjectMapper();
         SimpleModule module = new SimpleModule();
         module.addDeserializer(OAuth2AuthorizationRequest.class, new OAuth2AuthorizationRequestDeserializer());
         objectMapper.registerModule(module);
 
         Jackson2JsonRedisSerializer<OAuth2AuthorizationRequest> serializer = new Jackson2JsonRedisSerializer<>(objectMapper, OAuth2AuthorizationRequest.class);
+
+
 
         template.setValueSerializer(serializer);
         template.setHashValueSerializer(serializer);
